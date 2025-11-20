@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function AnimatedImage({
   src,
@@ -38,9 +39,10 @@ export default function AnimatedImage({
       ref={ref}
       className={`relative w-full h-full overflow-hidden perspective-1000`}
     >
-      <img
+      {/* <image
         src={src}
         alt={alt}
+
         className={`w-full h-full object-cover transition-transform duration-[180ms] ease-out transform-gpu 
   ${visible ? "scale-y-100 rotate-x-0 opacity-100" : "scale-y-75 rotate-x-40 opacity-0"} 
   ${className}`}
@@ -50,7 +52,23 @@ export default function AnimatedImage({
         }}
 
         onLoad={() => setLoaded(true)}
-      />
+      /> */}
+      <Image
+  src={src}
+  alt={alt}
+  width={typeof width === "number" ? width : 500}
+  height={typeof height === "number" ? height : 500}
+  className={`w-full h-full object-cover transition-transform duration-[180ms] ease-out transform-gpu 
+    ${visible ? "scale-y-100 rotate-x-0 opacity-100" : "scale-y-75 rotate-x-40 opacity-0"} 
+    ${className}`
+  }
+  style={{
+    transitionProperty: "transform, opacity",
+    willChange: "transform, opacity",
+  }}
+  onLoadingComplete={() => setLoaded(true)}
+/>
+      
     </div>
   );
 }

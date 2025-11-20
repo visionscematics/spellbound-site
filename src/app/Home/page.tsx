@@ -5,8 +5,7 @@ import ContactForm from "@/app/components/common/ContactForm";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Typewriter from "typewriter-effect";
 import AnimatedImage from "../components/common/AnimatedImage";
-import { ImGift } from "react-icons/im";
-// import AnimatedImage from "@/app/components/common/AnimatedImage";
+
 
 const slides = [
   {
@@ -38,7 +37,6 @@ function CountUpNumber({ end, duration = 800, start }: { end: number; duration?:
       if (!startTimeRef.t) startTimeRef.t = timestamp;
       const elapsed = timestamp - startTimeRef.t;
       const progress = Math.min(elapsed / duration, 1);
-      // ease-out (quadratic)
       const eased = 1 - Math.pow(1 - progress, 2);
       const current = Math.floor(initial + diff * eased);
       setValue(current);
@@ -203,13 +201,14 @@ export default function HomePage() {
                   key={i}
                   className="relative group rounded-lg overflow-hidden shadow-lg bg-gray-200 dark:bg-gray-900 transition-colors duration-300"
                 >
-                  <img
+                  <Image
                     src={p.img}
                     alt={p.title}
                     width={600}
                     height={300}
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 filter grayscale group-hover:grayscale-0"
                   />
+
                   <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/80 w-full">
                     <h3 className="text-lg font-semibold text-white">{p.title}</h3>
                   </div>
@@ -218,33 +217,42 @@ export default function HomePage() {
             </div>
           </section>
 
-
-          <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mt-6">
-            <div className="max-w-9xl  pt-5 pb-5 ">
+          <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500">
+            <div className="max-w-8xl mx-auto w-full">
               <div className="grid grid-cols-3 gap-6">
+
                 <div className="col-span-2 relative">
                   <AnimatedImage
                     src="/home/Shanchi-final.jpg"
                     alt="Dummy Main"
                     className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                   />
+
                   <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                  <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+
+
+                  <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     Shanchi
                   </p>
                 </div>
+
+
                 <div className="flex flex-col gap-6">
+
                   <div className="relative">
                     <AnimatedImage
                       src="/home/Marry-poppins-returns-final.jpg"
                       alt="Dummy Right 1"
                       className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                     />
+
+
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white text-lg font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       Marry poppins returns
                     </p>
                   </div>
+
 
                   <div className="relative">
                     <AnimatedImage
@@ -252,6 +260,8 @@ export default function HomePage() {
                       alt="Dummy Right 2"
                       className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                     />
+
+
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
                     <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       Birds of the prey
@@ -430,10 +440,9 @@ export default function HomePage() {
                 </p>
               </div>
 
-
               <div className="flex flex-col items-center justify-center space-y-8 md:space-y-8 flex-shrink-0">
 
-                <div className="ml-[300px]  flex justify-center gap-10 md:gap-10">
+                <div className="ml-[300px] flex justify-center gap-10 md:gap-10">
                   {[
                     { label: "Rotoscopy", light: "/logo/Roto-1.png", dark: "/logo/Roto-2-1.png" },
                     { label: "Paint/Prep", light: "/logo/print.png", dark: "/logo/Paintprep-2.png" },
@@ -441,9 +450,25 @@ export default function HomePage() {
                   ].map((item) => (
                     <div key={item.label} className="flex flex-col items-center group relative">
                       <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
-                        <img src={item.light} alt={item.label} className="w-8 h-8 object-contain block dark:hidden" />
-                        <img src={item.dark} alt={item.label} className="w-8 h-8 object-contain hidden dark:block" />
+
+                        <Image
+                          src={item.light}
+                          alt={item.label}
+                          width={32}
+                          height={32}
+                          className="w-8 h-8 object-contain block dark:hidden"
+                        />
+
+                        <Image
+                          src={item.dark}
+                          alt={item.label}
+                          width={32}
+                          height={32}
+                          className="w-8 h-8 object-contain hidden dark:block"
+                        />
+
                       </div>
+
                       <p className="mt-2 text-[14px] font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:rounded-full after:transition-all after:duration-300 after:-translate-x-1/2 group-hover:after:w-6">
                         {item.label}
                       </p>
@@ -451,20 +476,36 @@ export default function HomePage() {
                   ))}
                 </div>
 
-
-                <div className="flex ml-[300px] justify-center gap-10 md:gap-10">
+                <div className="ml-[300px] flex justify-center gap-10 md:gap-10">
                   {[
                     { label: "Match Moving", light: "/logo/match-move.png", dark: "/logo/Matchmove-2.png" },
                     { label: "Rotomation", light: "/logo/Rotomotion.png", dark: "/logo/Rotomation2.png" },
                   ].map((item) => (
                     <div key={item.label} className="flex flex-col items-center group relative">
                       <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
-                        <img src={item.light} alt={item.label} className="w-8 h-8 object-contain block dark:hidden" />
-                        <img src={item.dark} alt={item.label} className="w-8 h-8 object-contain hidden dark:block" />
+
+                        <Image
+                          src={item.light}
+                          alt={item.label}
+                          width={32}
+                          height={32}
+                          className="w-8 h-8 object-contain block dark:hidden"
+                        />
+
+                        <Image
+                          src={item.dark}
+                          alt={item.label}
+                          width={32}
+                          height={32}
+                          className="w-8 h-8 object-contain hidden dark:block"
+                        />
+
                       </div>
+
                       <p className="mt-2 text-[14px] font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:rounded-full after:transition-all after:duration-300 after:-translate-x-1/2 group-hover:after:w-6">
                         {item.label}
                       </p>
+
                     </div>
                   ))}
                 </div>
@@ -528,8 +569,6 @@ export default function HomePage() {
             </div>
           </section>
 
-
-
           <section
             className="relative flex flex-col md:flex-row items-stretch justify-center bg-cover bg-center"
             style={{
@@ -537,45 +576,34 @@ export default function HomePage() {
             }}
           >
             <div className="absolute inset-0 bg-black/50"></div>
-
             <div className="relative flex-[1.3] flex justify-center items-center py-10 md:py-16">
-              <div className="bg-white  dark:bg-black/30 backdrop-blur-sm shadow-lg">
-                <img
+              <div className="w-full h-full overflow-hidden">
+                <Image
                   src="/home/small.jpg"
                   alt="Data Security"
-                  className="w-full h-auto object-cover"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
-
-
             <div className="relative flex-[0.9] bg-[#d80000] text-white z-10 flex flex-col justify-center p-10 md:p-16 min-h-[85vh] ">
               <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-8">
                 We prioritize Data security as much as delivering quality content
               </h2>
 
               <div className="space-y-6">
-
                 <div>
-                  <div
-                    className="flex items-center cursor-pointer"
-                    onClick={() => toggle("security")}
-                  >
-                    <span className="text-2xl font-bold mr-2">
-                      {active === "security" ? "−" : "+"}
-                    </span>
+                  <div className="flex items-center cursor-pointer" onClick={() => toggle("security")}>
+                    <span className="text-2xl font-bold mr-2">{active === "security" ? "−" : "+"}</span>
                     <span className="text-md font-semibold">Data & Security</span>
                   </div>
-                  <div
-                    className={`overflow-hidden transition-all duration-500 ${active === "security" ? "max-h-40 mt-2" : "max-h-0"
-                      }`}
-                  >
+                  <div className={`overflow-hidden transition-all duration-500 ${active === "security" ? "max-h-40 mt-2" : "max-h-0"}`}>
                     <p className="text-sm leading-relaxed">
-                      Data security is our mainstream priority throughout the project process. We ensure our clients feel secure working with us and never experience the adverse of a data breach.
+                      Data security is our mainstream priority throughout the project process...
                     </p>
                   </div>
                 </div>
-
 
                 <div>
                   <div
@@ -620,6 +648,7 @@ export default function HomePage() {
               </div>
             </div>
           </section>
+
 
 
           <div className="p-5 px-[100px]">

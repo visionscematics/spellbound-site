@@ -6,7 +6,7 @@ export async function POST(req: { json: () => any; }) {
   try {
     const body = await req.json();
 
-    const { name, email, comment,pageName } = body;
+    const { name, email, comment,pageName, projectId } = body;
 
     console.log("Received body:", body);
 
@@ -41,14 +41,13 @@ console.log("Creating comment...");
     
     },
   });
-   const baseurl = process.env.BASE_URL || "http://localhost:3000/projects/";
-  const approveUrl = `${baseurl}commentApprove?id=${newComment.id}`;
-  const rejectUrl = `${baseurl}commentReject?id=${newComment.id}`;
+  //  const baseurl = process.env.BASE_URL || "http://localhost:3000/projects/";
+  // const approveUrl = `${baseurl}${projectId}/commentApprove?id=${newComment.id}`;
+  // const rejectUrl = `${baseurl}${projectId}commentReject?id=${newComment.id}`;
 
-  //  const approveUrl = `https://https://spellboundvfx.com/projects/commentApprove?id=${newComment.id}`;
-  // const rejectUrl = `https://digiaura.co.in/commentReject?id=${newComment.id}`;
-//   const approveUrl = `https://spellboundvfx.com/projects/commentApprove?id=${newComment.id}`;
-// const rejectUrl = `https://spellboundvfx.com/projects/commentReject?id=${newComment.id}`;
+
+  const approveUrl = `https://spellboundvfx.com/projects/${projectId}/commentApprove?id=${newComment.id}`;
+  const rejectUrl = `https://spellboundvfx.com/projects/${projectId}/commentReject?id=${newComment.id}`;
 
 
   console.log("Sending email...");
@@ -89,8 +88,8 @@ console.log("Creating comment...");
 
   await transporter.sendMail({
     from: username,
-     to:"ramasrij18@gmail.com",
-    // to: username,
+    //  to:"ramasrij18@gmail.com",
+    to: username,
     subject: "New comment for approval",
     replyTo: email,
     html: htmlContent,

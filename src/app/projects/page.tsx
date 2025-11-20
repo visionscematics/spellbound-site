@@ -128,49 +128,60 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mt-6">
-        <div className="max-w-[1200px] mx-auto p-2">
-          <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-2 relative">
-              <AnimatedImage
-                src="/home/Shanchi-final.jpg"
-                alt="Dummy Main"
-                className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
-              />
-              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-              <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                Shanchi
-              </p>
-            </div>
+          <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500">
+            <div className="max-w-8xl mx-auto w-full">
+              <div className="grid grid-cols-3 gap-6">
 
-            <div className="flex flex-col gap-6">
-              <div className="relative">
-                <AnimatedImage
-                  src="/home/Marry-poppins-returns-final.jpg"
-                  alt="Dummy Right 1"
-                  className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
-                />
-                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white text-lg font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                  Marry poppins returns
-                </p>
-              </div>
+                <div className="col-span-2 relative">
+                  <AnimatedImage
+                    src="/home/Shanchi-final.jpg"
+                    alt="Dummy Main"
+                    className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
+                  />
 
-              <div className="relative">
-                <AnimatedImage
-                  src="/home/Birds-of-prey-final-small.jpg"
-                  alt="Dummy Right 2"
-                  className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
-                />
-                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                  Birds of the prey
-                </p>
+                  <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
+
+
+                  <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    Stranger things
+                  </p>
+                </div>
+
+
+                <div className="flex flex-col gap-6">
+
+                  <div className="relative">
+                    <AnimatedImage
+                      src="/home/Marry-poppins-returns-final.jpg"
+                      alt="Dummy Right 1"
+                      className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
+                    />
+
+
+                    <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      Marry poppins returns
+                    </p>
+                  </div>
+
+
+                  <div className="relative">
+                    <AnimatedImage
+                      src="/home/Birds-of-prey-final-small.jpg"
+                      alt="Dummy Right 2"
+                      className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
+                    />
+
+
+                    <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      Birds of the prey
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
 
       <section
@@ -278,7 +289,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
 
@@ -320,7 +331,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mt-5 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
@@ -362,7 +373,7 @@ export default function ProjectsPage() {
 
 
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
             <div className="flex flex-col gap-6">
@@ -402,7 +413,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
@@ -444,7 +455,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
 
@@ -489,7 +500,7 @@ export default function ProjectsPage() {
 
 
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
 
@@ -531,7 +542,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
 
@@ -572,7 +583,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
@@ -613,7 +624,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
 
@@ -655,7 +666,7 @@ export default function ProjectsPage() {
       </section>
 
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
@@ -697,7 +708,7 @@ export default function ProjectsPage() {
       </section>
 
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500">
+      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
         <div className="max-w-[1200px] w-full p-2">
           <div className="grid grid-cols-3 gap-6">
 

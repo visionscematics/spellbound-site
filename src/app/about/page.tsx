@@ -233,7 +233,6 @@ export default function About() {
           </section>
         </div>
       </div>
-      {/* -------- GRAY SECTION END -------- */}
     </div>
   );
 }
