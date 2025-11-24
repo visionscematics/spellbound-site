@@ -1,5 +1,4 @@
-import { prisma } from "@/lib/prisma"; // Adjust the import path as necessary
-
+import { prisma } from "@/lib/prisma"; 
 
 import { NextRequest } from "next/server";
 
@@ -7,6 +6,7 @@ export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const commentId = searchParams.get("id");
+    
 
     console.log('Approve Comments ~ commentId: 1', commentId)
 
@@ -21,7 +21,8 @@ export async function GET(req: NextRequest) {
 
     console.log("Fetching pending comment...");
     const pendingComment = await prisma.pendingComment.findUnique({
-      where: { id: commentId },
+      where: { id: Number(commentId) },
+
     });
 
     if (!pendingComment) {
@@ -35,7 +36,7 @@ export async function GET(req: NextRequest) {
     }
 
     console.log("Approving comment...");
-    await prisma.approvedComment.create({
+   await prisma.approvedComment.create({
       data: {
         name: pendingComment.name,
         email: pendingComment.email,
@@ -46,9 +47,10 @@ export async function GET(req: NextRequest) {
     });
 
     console.log("Deleting pending comment...");
-    await prisma.pendingComment.delete({
-      where: { id: commentId },
-    });
+await prisma.pendingComment.delete({
+  where: { id: Number(commentId) },
+
+});
 
     console.log("Comment successfully moved!");
 

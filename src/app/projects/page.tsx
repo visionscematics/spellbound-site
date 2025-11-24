@@ -33,12 +33,12 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#0c0c0c] text-white py-20 px-6 md:px-16 transition-colors duration-500">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+      <div className="w-full px-[100px] pt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((proj) => (
             <div
               key={proj.id}
-              className="relative group w-[380px] h-[400px] overflow-hidden rounded-lg shadow-lg bg-gray-100 dark:bg-[#111] transition-all duration-500"
+              className="relative group w-full h-[420px] overflow-hidden rounded-lg shadow-lg bg-gray-100 dark:bg-[#111] transition-all duration-500"
             >
               <Image
                 src={proj.image}
@@ -47,15 +47,14 @@ export default function ProjectsPage() {
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
               <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <button
                   onClick={() => setSelectedProject(proj)}
-                  className="p-2 rounded-full bg-black/20 hover:bg-black/40 dark:bg-white/20 dark:hover:bg-white/30 transition-all duration-200"
+                  className="p-2 rounded-full bg-black/20 hover:bg-black/40 dark:bg-white/20 dark:hover:bg-white/30"
                 >
-                  <Expand className="w-5 h-5 text-white dark:text-white" />
+                  <Expand className="w-5 h-5 text-white" />
                 </button>
               </div>
 
@@ -66,6 +65,7 @@ export default function ProjectsPage() {
           ))}
         </div>
       </div>
+
 
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex bg-white/90 dark:bg-black/90 backdrop-blur-sm transition-colors duration-500">
@@ -117,9 +117,10 @@ export default function ProjectsPage() {
                 src={p.img}
                 alt={p.title}
                 width={400}
-                height={300}
-                className="object-cover w-[380px] h-[400px] group-hover:scale-105 transition-transform duration-500 filter grayscale group-hover:grayscale-0"
+                height={400}
+                className="object-cover w-full h-[400px] group-hover:scale-105 transition-transform duration-500 filter grayscale group-hover:grayscale-0"
               />
+
               <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/80 w-full">
                 <h3 className="text-lg font-semibold text-white">{p.title}</h3>
               </div>
@@ -128,60 +129,61 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-          <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500">
-            <div className="max-w-8xl mx-auto w-full">
-              <div className="grid grid-cols-3 gap-6">
 
-                <div className="col-span-2 relative">
-                  <AnimatedImage
-                    src="/home/Shanchi-final.jpg"
-                    alt="Dummy Main"
-                    className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
-                  />
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500">
+        <div className="max-w-8xl mx-auto w-full">
+          <div className="grid grid-cols-3 gap-6">
 
-                  <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
+            <div className="col-span-2 relative">
+              <AnimatedImage
+                src="/home/Shanchi-final.jpg"
+                alt="Dummy Main"
+                className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
+              />
 
-
-                  <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    Stranger things
-                  </p>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
 
 
-                <div className="flex flex-col gap-6">
-
-                  <div className="relative">
-                    <AnimatedImage
-                      src="/home/Marry-poppins-returns-final.jpg"
-                      alt="Dummy Right 1"
-                      className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
-                    />
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                Stranger things
+              </p>
+            </div>
 
 
-                    <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      Marry poppins returns
-                    </p>
-                  </div>
+            <div className="flex flex-col gap-6">
+
+              <div className="relative">
+                <AnimatedImage
+                  src="/home/Marry-poppins-returns-final.jpg"
+                  alt="Dummy Right 1"
+                  className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
+                />
 
 
-                  <div className="relative">
-                    <AnimatedImage
-                      src="/home/Birds-of-prey-final-small.jpg"
-                      alt="Dummy Right 2"
-                      className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
-                    />
+                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Marry poppins returns
+                </p>
+              </div>
 
 
-                    <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      Birds of the prey
-                    </p>
-                  </div>
-                </div>
+              <div className="relative">
+                <AnimatedImage
+                  src="/home/Birds-of-prey-final-small.jpg"
+                  alt="Dummy Right 2"
+                  className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
+                />
+
+
+                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Birds of the prey
+                </p>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
 
       <section
@@ -289,11 +291,9 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
-
-
             <div className="flex flex-col gap-6">
               <div className="relative">
                 <AnimatedImage
@@ -331,8 +331,8 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mt-5 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
               <AnimatedImage
@@ -373,8 +373,8 @@ export default function ProjectsPage() {
 
 
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
             <div className="flex flex-col gap-6">
               <div className="relative">
@@ -413,8 +413,8 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
               <AnimatedImage
@@ -455,8 +455,8 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
 
             <div className="flex flex-col gap-6">
@@ -500,8 +500,8 @@ export default function ProjectsPage() {
 
 
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
 
             <div className="col-span-2 relative">
@@ -542,8 +542,8 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
 
             <div className="flex flex-col gap-6">
@@ -583,8 +583,8 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
               <AnimatedImage
@@ -624,8 +624,8 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
 
             <div className="flex flex-col gap-6">
@@ -666,8 +666,8 @@ export default function ProjectsPage() {
       </section>
 
 
-      <section className="w-full bg-white dark:bg-[#131316]  flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
             <div className="col-span-2 relative">
               <AnimatedImage
@@ -708,8 +708,8 @@ export default function ProjectsPage() {
       </section>
 
 
-      <section className="w-full bg-white dark:bg-[#131316] flex justify-center transition-colors duration-500 mb-10">
-        <div className="max-w-[1200px] w-full p-2">
+      <section className="w-full bg-white px-[100px] dark:bg-[#131316] py-16 flex justify-center transition-colors duration-500 mb-10">
+        <div className="max-w-8xl mx-auto w-full">
           <div className="grid grid-cols-3 gap-6">
 
             <div className="flex flex-col gap-6">

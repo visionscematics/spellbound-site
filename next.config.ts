@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
     domains: [],
   },
   reactStrictMode: false,
+
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

@@ -3,6 +3,9 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Comments from "@/app/components/common/comment";
 import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
 
 const projects = [
   { id: 1, title: "See", image: "/projects/see.jpg" },
@@ -19,11 +22,15 @@ const projects = [
   { id: 12, title: "Black panther-Wakanda Forever", image: "/projects/BLACKPANTHER.jpeg" },
 ];
 
-export default function ProjectDetailPage({ params }: { params: { id: string } }) {
-  const project = projects.find((p) => p.id === Number(params.id));
-  const currentIndex = projects.findIndex((p) => p.id === Number(params.id));
+// export default function ProjectDetailPage({ params }: { params: { id: string } }) {
+export default async function ProjectDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  // const project = projects.find((p) => p.id === Number(params.id));
+  // const currentIndex = projects.findIndex((p) => p.id === Number(params.id));
+  // const nextProject = projects[currentIndex + 1] || projects[0];
+ const project = projects.find((p) => p.id === Number(id));
+  const currentIndex = projects.findIndex((p) => p.id === Number(id));
   const nextProject = projects[currentIndex + 1] || projects[0];
-
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center text-white bg-black">

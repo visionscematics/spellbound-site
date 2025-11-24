@@ -4,14 +4,15 @@ import { NextRequest } from "next/server";
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
-    const commentId = searchParams.get("id");
+    const commentId = Number(searchParams.get("id"));
 
-    if (!commentId) {
-      return new Response(JSON.stringify({ message: "Comment ID is required" }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      });
-    }
+
+if (!commentId) {
+  return new Response(JSON.stringify({ message: "Comment ID is required" }), {
+    status: 400,
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
     const pendingComment = await prisma.pendingComment.findUnique({
       where: { id: commentId },
@@ -24,7 +25,10 @@ export async function GET(req: NextRequest) {
       });
     }
 
-    await prisma.pendingComment.delete({ where: { id: commentId } });
+    await prisma.pendingComment.delete({
+  where: { id: Number(commentId) },
+});
+
 
     return new Response(
       JSON.stringify({ message: "Comment rejected and deleted successfully!" }),

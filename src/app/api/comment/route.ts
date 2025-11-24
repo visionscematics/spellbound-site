@@ -1,12 +1,13 @@
 import { prisma } from "@/lib/prisma";
 import nodemailer from "nodemailer";
+import { NextRequest } from "next/server";
 
-export async function POST(req: { json: () => any; }) {
+export async function POST(req: NextRequest) {
   console.log("Received request:", req);
   try {
     const body = await req.json();
 
-    const { name, email, comment,pageName, projectId } = body;
+    const { name, email, comment, pageName, projectId } = body;
 
     console.log("Received body:", body);
 
@@ -16,11 +17,15 @@ export async function POST(req: { json: () => any; }) {
         headers: { "Content-Type": "application/json" },
       });
     }
+    const username = process.env.SMTP_EMAIL;
+    const password = process.env.SMTP_PASSWORD;
+    const prodUsername = process.env.PROD_EMAIL || 'production@spellboundvfx.com';
+    const prodPassword = process.env.PROD_EMAIL_PASSWORD;
 
-    const username = process.env.NEXT_PUBLIC_EMAIL;
-    const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
+    // const username = process.env.NEXT_PUBLIC_EMAIL;
+    // const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
     //const prodUsername = process.env.NEXT_PUBLIC_PROD_EMAIL || 'production@spellboundvfx.com';
-    const prodPassword = process.env.NEXT_PUBLIC_PROD_EMAIL_PASSWORD;
+    // const prodPassword = process.env.NEXT_PUBLIC_PROD_EMAIL_PASSWORD;
 
 
     console.log("🚀 ~ POST ~ username:", username)
@@ -31,42 +36,47 @@ export async function POST(req: { json: () => any; }) {
       throw new Error("Email credentials are not defined");
     }
 
-console.log("Creating comment...");
-  const newComment = await prisma.pendingComment.create({
-    data: {
-      name,
-      email,
-      comment,
-      pageName: "projects",
-    
-    },
-  });
-  //  const baseurl = process.env.BASE_URL || "http://localhost:3000/projects/";
-  // const approveUrl = `${baseurl}${projectId}/commentApprove?id=${newComment.id}`;
-  // const rejectUrl = `${baseurl}${projectId}commentReject?id=${newComment.id}`;
+    console.log("Creating comment...");
+    const newComment = await prisma.pendingComment.create({
+      data: {
+        name,
+        email,
+        comment,
+        pageName: "projects",
+        
+
+      },
+    });
+    if (!projectId) {
+  throw new Error("projectId missing da 😭");
+}
+
+    //  const baseurl = process.env.BASE_URL || "http://localhost:3000/projects/";
+    // const approveUrl = `${baseurl}${projectId}/commentApprove?id=${newComment.id}`;
+    // const rejectUrl = `${baseurl}${projectId}commentReject?id=${newComment.id}`;
 
 
-  const approveUrl = `https://spellboundvfx.com/projects/${projectId}/commentApprove?id=${newComment.id}`;
-  const rejectUrl = `https://spellboundvfx.com/projects/${projectId}/commentReject?id=${newComment.id}`;
+    const approveUrl = `https://spellboundvfx.com/projects/${projectId}/commentApprove?id=${newComment.id}`;
+    const rejectUrl = `https://spellboundvfx.com/projects/${projectId}/commentReject?id=${newComment.id}`;
 
 
-  console.log("Sending email...");
+    console.log("Sending email...");
 
-  const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
-        tls: {
-          ciphers: "SSLv3",
-          rejectUnauthorized: false,
-        },
-        auth: {
-          user: username,
-          pass: password,
-        },
-      });
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      tls: {
+        ciphers: "SSLv3",
+        rejectUnauthorized: false,
+      },
+      auth: {
+        user: username,
+        pass: password,
+      },
+    });
 
-      const htmlContent = `
+    const htmlContent = `
       <h2>New Comment Submitted</h2>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
@@ -86,26 +96,26 @@ console.log("Creating comment...");
     `;
 
 
-  await transporter.sendMail({
-    from: username,
-    //  to:"ramasrij18@gmail.com",
-    to: username,
-    subject: "New comment for approval",
-    replyTo: email,
-    html: htmlContent,
-  });
-  console.log("Responding success...");
-  return new Response(JSON.stringify({ message: "Comment received!" }), {
-    status: 200,
-    headers: { "Content-Type": "application/json" },
-  });
-} catch (error) {
-  console.error("API error:", error);
-  return new Response(JSON.stringify({ message: "Internal Server Error" }), {
-    status: 500,
-    headers: { "Content-Type": "application/json" },
-  });
-}
+    await transporter.sendMail({
+      from: username,
+      //  to:"ramasrij18@gmail.com",
+      to: prodUsername,
+      subject: "New comment for approval",
+      replyTo: email,
+      html: htmlContent,
+    });
+    console.log("Responding success...");
+    return new Response(JSON.stringify({ message: "Comment received!" }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.error("API error:", error);
+    return new Response(JSON.stringify({ message: "Internal Server Error" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 }
 
 

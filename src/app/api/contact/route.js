@@ -1,17 +1,22 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// export const runtime = 'edge';
 
 export async function POST(req) {
   try {
     const body = await req.json();
     const { name, course, email, mobile, company } = body;
+    const username = process.env.SMTP_EMAIL;
+    const password = process.env.SMTP_PASSWORD;
+    const prodUsername = process.env.PROD_EMAIL || 'production@spellboundvfx.com';
+    const prodPassword = process.env.PROD_EMAIL_PASSWORD;
 
-    const username = process.env.NEXT_PUBLIC_EMAIL;
-    const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
-    const prodUsername = process.env.NEXT_PUBLIC_PROD_EMAIL || 'production@spellboundvfx.com';
-    const prodPassword = process.env.NEXT_PUBLIC_PROD_EMAIL_PASSWORD;
+
+
+    // const username = process.env.NEXT_PUBLIC_EMAIL;
+    // const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
+    // const prodUsername = process.env.NEXT_PUBLIC_PROD_EMAIL || 'production@spellboundvfx.com';
+    // const prodPassword = process.env.NEXT_PUBLIC_PROD_EMAIL_PASSWORD;
 
 
     console.log("🚀 ~ POST ~ username:", username)
@@ -121,14 +126,14 @@ export async function POST(req) {
       transporter.sendMail({
         from: username,
         to: email,
-        subject: `Thank You for Contacting VFX Academy`,
+        subject: `Thank You for Contacting Spellbound VFX`,
         replyTo: username,
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border-radius: 10px; background: linear-gradient(to right, #f4a31f, #d62d7c, #1e40af);">
               <h2 style="background-color: rgba(0, 0, 0, 0.5); color: white; text-align: center; padding: 10px; border-radius: 10px;">Thank You for Contacting Us</h2>
               <p style="font-size: 16px; color: white; text-align: justify;">
                 Dear ${name},<br/><br/>
-                Thank you for reaching out to <strong>Spellbound VFX </strong>. We appreciate your interest in our <strong>${course}</strong> course. 
+                Thank you for reaching out to <strong>Spellbound VFX </strong>.
                 Our team will review your inquiry and get back to you shortly. 
               </p>
         

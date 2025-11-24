@@ -2,7 +2,7 @@
 import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const comments = await prisma.approvedComment.findMany({
+ const comments = await prisma.approvedComment.findMany({
     orderBy: { approvedAt: "desc" },
   });
   console.log("comment",comments)

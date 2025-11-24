@@ -1,4 +1,3 @@
-// ApprovedComments.tsx
 import { useEffect, useState } from "react";
 
 interface Comment {
@@ -7,7 +6,7 @@ interface Comment {
   email: string;
   comment: string;
   approvedAt: string;
-  pageName: string; // assuming each comment is associated with a URL or post ID
+  pageName: string; 
 }
 
 function timeAgo(dateStr: string): string {
@@ -22,7 +21,7 @@ function timeAgo(dateStr: string): string {
     { limit: 3600, value: 60, unit: "minute" },
     { limit: 86400, value: 3600, unit: "hour" },
     { limit: 604800, value: 86400, unit: "day" },
-    { limit: 2629800, value: 604800, unit: "week" }, // approx. 1 month = 30.44 days
+    { limit: 2629800, value: 604800, unit: "week" }, 
     { limit: 31557600, value: 2629800, unit: "month" },
     { limit: Infinity, value: 31557600, unit: "year" },
   ];
