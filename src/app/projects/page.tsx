@@ -14,7 +14,7 @@ type Project = {
 
 const projects: Project[] = [
   { id: 1, title: "See", image: "/projects/see.jpg" },
-  { id: 2, title: "Secret Invasion", image: "/projects/secret.jpeg" },
+  { id: 2, title: "Secret Invasion", image: "/projects/Secret.jpeg" },
   { id: 3, title: "Shazam", image: "/projects/shzam2.jpeg" },
   { id: 4, title: "Guardians of the Galaxy", image: "/projects/GUARDIANS.webp" },
   { id: 5, title: "Heart of Stone", image: "/projects/heartofstone.jpeg" },
@@ -751,3 +751,4 @@ export default function ProjectsPage() {
     </div>
   );
 }
+
