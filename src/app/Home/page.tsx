@@ -151,7 +151,7 @@ export default function HomePage() {
 
             <button className="flex items-center text-white font-semibold text-lg hover:text-[#c00] transition-colors">
               Read More →
-            </button>
+            </button> 
           </div>
 
           <button
