@@ -43,6 +43,7 @@ export async function GET(req: NextRequest) {
         comment: pendingComment.comment,
         pageName:pendingComment.pageName,
         approvedAt: new Date(),
+        projectId: pendingComment.projectId  
       },
     });
 
