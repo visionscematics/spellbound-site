@@ -149,11 +149,11 @@ export default function HomePage() {
 
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Artistic Excellence</h1>
 
-            <button  
-            onClick={() => window.location.href = "/about"}
-            className="flex items-center text-white font-semibold text-lg hover:text-[#c00] transition-colors ">
+            <button
+              onClick={() => window.location.href = "/about"}
+              className="flex items-center text-white font-semibold text-lg hover:text-[#c00] transition-colors ">
               Read More →
-            </button> 
+            </button>
           </div>
 
           <button
@@ -186,8 +186,8 @@ export default function HomePage() {
                 services globally. We have worked with Emmy-winning international motion pictures, delivering seamless high-quality
                 2D and Native Stereo work requiring Roto, Paint/Prep, Compositing, Match Move, and Rotomation.
               </p>
-              <button  onClick={() => window.location.href = "/services"}
-              className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-md ">Read More</button>
+              <button onClick={() => window.location.href = "/services"}
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-md ">Read More</button>
             </div>
           </div>
         </section>
@@ -252,7 +252,7 @@ export default function HomePage() {
 
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
                     <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                     Mary Poppins Returns
+                      Mary Poppins Returns
                     </p>
                   </div>
 
@@ -426,69 +426,69 @@ export default function HomePage() {
 
 
 
- <section className="relative py-16 px-6 md:px-12 bg-white text-black dark:bg-[#0f0f0f] dark:text-white transition-colors duration-300 overflow-hidden">
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,0,0,0.04),_transparent_60%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.06),_transparent_60%)]"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(0,0,0,0.03),_transparent_60%)] dark:bg-[radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.04),_transparent_60%)]"></div>
+          <section className="relative py-16 px-6 md:px-12 bg-white text-black dark:bg-[#0f0f0f] dark:text-white transition-colors duration-300 overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,0,0,0.04),_transparent_60%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.06),_transparent_60%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(0,0,0,0.03),_transparent_60%)] dark:bg-[radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.04),_transparent_60%)]"></div>
 
-  <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
 
-    {/* LEFT CONTENT */}
-    <div className="flex-1">
-      <h4 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400">
-        What We Do
-      </h4>
-      <div className="w-24 h-[1px] bg-gray-400 dark:bg-gray-600 my-3"></div>
-      <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
-        Bringing Alive Vivid Visions
-      </h2>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">
-        Comprehensive post-production services for project plans, visual strategies and developing
-        unfathomable visual effects with a prolific team and contemporary technology for large and
-        diversified international productions.
-      </p>
-    </div>
+              {/* LEFT CONTENT */}
+              <div className="flex-1">
+                <h4 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400">
+                  What We Do
+                </h4>
+                <div className="w-24 h-[1px] bg-gray-400 dark:bg-gray-600 my-3"></div>
+                <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+                  Bringing Alive Vivid Visions
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">
+                  Comprehensive post-production services for project plans, visual strategies and developing
+                  unfathomable visual effects with a prolific team and contemporary technology for large and
+                  diversified international productions.
+                </p>
+              </div>
 
-    {/* RIGHT ICON GRID */}
-    <div className="flex-1 flex flex-col items-center gap-10">
+              {/* RIGHT ICON GRID */}
+              <div className="flex-1 flex flex-col items-center gap-10">
 
-      <div className="grid grid-cols-3 gap-8 text-center">
-        {[
-          { label: "Rotoscopy", light: "/logo/Roto-1.png", dark: "/logo/Roto-2-1.png" },
-          { label: "Paint/Prep", light: "/logo/print.png", dark: "/logo/Paintprep-2.png" },
-          { label: "Compositing", light: "/logo/composite.png", dark: "/logo/Compositing-2.png" },
-        ].map((item) => (
-          <div key={item.label} className="flex flex-col items-center group">
-            <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
-              <Image src={item.light} alt={item.label} width={32} height={32} className="block dark:hidden" />
-              <Image src={item.dark} alt={item.label} width={32} height={32} className="hidden dark:block" />
+                <div className="grid grid-cols-3 gap-8 text-center">
+                  {[
+                    { label: "Rotoscopy", light: "/logo/Roto-1.png", dark: "/logo/Roto-2-1.png" },
+                    { label: "Paint/Prep", light: "/logo/print.png", dark: "/logo/Paintprep-2.png" },
+                    { label: "Compositing", light: "/logo/composite.png", dark: "/logo/Compositing-2.png" },
+                  ].map((item) => (
+                    <div key={item.label} className="flex flex-col items-center group">
+                      <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
+                        <Image src={item.light} alt={item.label} width={32} height={32} className="block dark:hidden" />
+                        <Image src={item.dark} alt={item.label} width={32} height={32} className="hidden dark:block" />
+                      </div>
+                      <p className="mt-2 text-sm font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:-translate-x-1/2 group-hover:after:w-6">
+                        {item.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-2 gap-8 text-center">
+                  {[
+                    { label: "Match Moving", light: "/logo/match-move.png", dark: "/logo/Matchmove-2.png" },
+                    { label: "Rotomation", light: "/logo/Rotomotion.png", dark: "/logo/Rotomation2.png" },
+                  ].map((item) => (
+                    <div key={item.label} className="flex flex-col items-center group">
+                      <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
+                        <Image src={item.light} alt={item.label} width={32} height={32} className="block dark:hidden" />
+                        <Image src={item.dark} alt={item.label} width={32} height={32} className="hidden dark:block" />
+                      </div>
+                      <p className="mt-2 text-sm font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:-translate-x-1/2 group-hover:after:w-6">
+                        {item.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
             </div>
-            <p className="mt-2 text-sm font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:-translate-x-1/2 group-hover:after:w-6">
-              {item.label}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-2 gap-8 text-center">
-        {[
-          { label: "Match Moving", light: "/logo/match-move.png", dark: "/logo/Matchmove-2.png" },
-          { label: "Rotomation", light: "/logo/Rotomotion.png", dark: "/logo/Rotomation2.png" },
-        ].map((item) => (
-          <div key={item.label} className="flex flex-col items-center group">
-            <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
-              <Image src={item.light} alt={item.label} width={32} height={32} className="block dark:hidden" />
-              <Image src={item.dark} alt={item.label} width={32} height={32} className="hidden dark:block" />
-            </div>
-            <p className="mt-2 text-sm font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:-translate-x-1/2 group-hover:after:w-6">
-              {item.label}
-            </p>
-          </div>
-        ))}
-      </div>
-
-    </div>
-  </div>
-</section>
+          </section>
 
           <section className="relative py-20 bg-white text-black dark:bg-[#0f0f0f] dark:text-white">
             <div className="grid grid-cols-1 md:grid-cols-4">
