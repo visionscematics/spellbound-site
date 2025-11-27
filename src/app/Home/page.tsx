@@ -118,7 +118,7 @@ export default function HomePage() {
   return (
     <div className="transition-colors duration-300 bg-white text-black dark:bg-black dark:text-white relative overflow-hidden">
       <div className="relative z-10 ">
-        <section className="relative w-full h-[100vh] overflow-hidden mb-8">
+        <section className="relative w-full h-[100vh] overflow-hidden mb-7">
           <div className="relative w-full h-full">
             <Image
               src={slides[current].image}
