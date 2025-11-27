@@ -58,8 +58,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         <section className=" rounded-md mb-20">
           <h2 className="text-3xl md:text-4xl font-bold leading-snug text-black dark:text-white"> Outright spectrum of Distinct Turnkey{" "} <span className="text-[#c00] ">High Quality</span>{" "} Creative Solutions <br className="hidden md:block" /> for all scales of production. </h2>
-          <p className="text-base md:text-md mt-6 leading-relaxed text-black dark:text-gray-300"> Our services tailored towards the whole production process, aiding in the designing, strategizing, and development of visual effects that gives life to our customers’ narrative, be it cinema, advertising and everything in between.</p>
-          <p className="text-base md:text-md mt-4 leading-relaxed text-black dark:text-gray-300"> Apart from the ingeniousness of our work, The respect and value we have for the data security and privacy of our clients is what makes us a valuable and proud outsourcing partner in the industry. </p> </section>
+          <p className="text-base md:text-md mt-6 leading-relaxed text-black dark:text-gray-300 text-justify"> Our services tailored towards the whole production process, aiding in the designing, strategizing, and development of visual effects that gives life to our customers’ narrative, be it cinema, advertising and everything in between.</p>
+          <p className="text-base md:text-md mt-4 leading-relaxed text-black dark:text-gray-300 text-justify"> Apart from the ingeniousness of our work, The respect and value we have for the data security and privacy of our clients is what makes us a valuable and proud outsourcing partner in the industry. </p> </section>
         <section className="text-center mb-20">
           <h3 className="text-3xl md:text-4xl font-extrabold text-black dark:text-white">
             Our Featured Services
@@ -84,7 +84,7 @@ export default function Services() {
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00] mb-4 transition-colors duration-300">
               Rotoscopy
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300 text-justify">
               We are internationally recognized for delivering high-definition rotoscopes
               that are mapped onto live action frames and make the components of the scene
               realistically overlaid. Our turnkey deliverables are subject to Splines, Alpha
@@ -105,7 +105,7 @@ export default function Services() {
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00] mb-4 transition-colors duration-300">
               Paint / Prep
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300 text-justify">
               We render excellence in every frame by integrating leading-edge technology to provide seamless visual outcomes to our clients, Our paint/prep expertise extends to Makeup Fix Dust/Scratch Removal, Clean Plate Generation, Rig/Wire/Object Removal, and Recreation of Missing Objects.
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 group-hover:text-white transition-colors duration-300">
@@ -148,10 +148,10 @@ export default function Services() {
           <div className="relative p-6 rounded-lg border-transparent hover:border-gray-700 
                   hover:bg-black transition-all duration-500 group">
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00] mb-4 transition-colors duration-300">
-              Composting
+              Compositing
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300">
-              We excel in the art of integrating digital elements seamlessly with live-action footage and bringing inconceivable fictions and fantasies to life. Our Composting expertise extends to Matching BG over FG, Tracking, Color Values, Depth of Field, and Reflection
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300 text-justify">
+              We excel in the art of integrating digital elements seamlessly with live-action footage and bringing inconceivable fictions and fantasies to life. Our Compositing expertise extends to Matching BG over FG, Tracking, Color Values, Depth of Field, and Reflection
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 group-hover:text-white transition-colors duration-300">
               <li>Matching BG over FG</li>
@@ -169,7 +169,7 @@ export default function Services() {
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00] mb-4 transition-colors duration-300">
               Match Moving
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300 text-justify">
               We offer a comprehensive range of tracking services with the capacity to handle even the most complex solves, Our team specializes in Object Tracking, Perspective View Render Out, Wire Frame & Cone Render Out, Camera Match with Survey Data, and Matching Main Camera with Witness Camera.
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 group-hover:text-white transition-colors duration-300">
@@ -212,7 +212,7 @@ export default function Services() {
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00] mb-4 transition-colors duration-300">
               Rotomation
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white transition-colors duration-300 text-justify">
               We stand out for our ability to deliver exceptional matte for flawless compositing. In particular, we offer Hard Track, Soft Track, and Cloth Matching with Vertex Animation for high-quality roto, paint, and virtual reality shots.
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 group-hover:text-white transition-colors duration-300">
@@ -228,7 +228,7 @@ export default function Services() {
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00]  mb-4">
               Pipeline Structure
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3 group-hover:text-white">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3 group-hover:text-white text-justify">
               An insight into Spellbound VFX’s pipeline structure:
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 group-hover:text-white transition-colors duration-300 ">
@@ -237,7 +237,7 @@ export default function Services() {
               <li>Set delivery timeframe and standards</li>
               <li>Ensure finest quality and prompt delivery for client review</li>
             </ul>
-            <p className="mt-3 text-gray-700 dark:text-gray-300 group-hover:text-white">
+            <p className="mt-3 text-gray-700 dark:text-gray-300 group-hover:text-white text-justify">
               Following a strict pipeline structure enables us to deliver the
               highest industry standards within the agreed timeline.
             </p>
@@ -250,10 +250,10 @@ export default function Services() {
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00] mb-4">
               Data & Security
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white text-justify">
               As much as we prioritize delivering quality and precision, the top of the list is the Intellectual Property Rights of our Clients. We value and respect artistic intellectual property, and have adopted strict policies within the work culture and digital protection to ensure that there is no threat to data breach or tampering.
             </p>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-white">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-white text-justify">
               Our infrastructures are protected and monitored 24/7, for the safety and security of our clients’ intellectual property. We strictly prohibit unauthorized entrance into our premises and integrate stern cybersecurity protocols
             </p>
           </div>
@@ -265,10 +265,10 @@ export default function Services() {
             <h4 className="text-2xl md:text-3xl font-extrabold text-[#c00] mb-4 ">
               TPN - Trusted Partner Network
             </h4>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 group-hover:text-white text-justify">
               The Trusted Partner Network (TPN) is a worldwide regulatory standard for cinema and television content security. The TPN initiative drives businesses in preventing data theft, breach, and hacking of their customers' movies and television series prior to their planned release and aims to enhance security knowledge, preparation, and skills across the entertainment industry.
             </p>
-            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-white">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-white text-justify">
               Spellbound VFX is an accredited TPN Certified Company. We value the essence of intellectual property and abide by stern TPN standards to ensure that our clients do not experience the misfortune of data leaks.
             </p>
           </div>

@@ -22,9 +22,9 @@ const projects: Project[] = [
   { id: 7, title: "Chupa", image: "/projects/CHUPA.jpeg" },
   { id: 8, title: "Ghosted", image: "/projects/GHOSTED.jpg" },
   { id: 9, title: "The Gray Man", image: "/projects/grayman.jpeg" },
-  { id: 10, title: "Ant-Man quantumania", image: "/projects/ANT.jpg" },
+  { id: 10, title: "Ant-Man and the Wasp: Quantumania", image: "/projects/ANT.jpg" },
   { id: 11, title: "Black Adam", image: "/projects/BLACKADAM.jpg" },
-  { id: 12, title: "Black panther-Wakanda Forever", image: "/projects/BLACKPANTHER.jpeg" },
+  { id: 12, title: "Black Panther: Wakanda Forever", image: "/projects/BLACKPANTHER.jpeg" },
 ];
 
 export default function ProjectsPage() {
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
               </div>
 
               <div className="absolute bottom-4 left-4">
-                <h2 className="text-lg font-semibold">{proj.title}</h2>
+                <h2 className="text-xl font-semibold">{proj.title}</h2>
               </div>
             </div>
           ))}
@@ -106,8 +106,8 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { title: "Once Upon a Time in Hollywood", img: "/home/Once-upon-time-in-hollywood-small-final.jpg" },
-            { title: "Spiderman – Far From Home", img: "/home/Far-from-home-final-small.jpg" },
-            { title: "Antman & the WASP", img: "/home/Ant-man-and-the-wasp-small-final.jpg" },
+            { title: "Spider-Man: Far from Home", img: "/home/Far-from-home-final-small.jpg" },
+            { title: "Ant-Man and the Wasp", img: "/home/Ant-man-and-the-wasp-small-final.jpg" },
           ].map((p, i) => (
             <div
               key={i}
@@ -122,7 +122,7 @@ export default function ProjectsPage() {
               />
 
               <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-black/80 w-full">
-                <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+                <h3 className="text-xl font-semibold text-white">{p.title}</h3>
               </div>
             </div>
           ))}
@@ -144,8 +144,8 @@ export default function ProjectsPage() {
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
 
 
-              <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                Stranger things
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                Shanchi
               </p>
             </div>
 
@@ -161,8 +161,8 @@ export default function ProjectsPage() {
 
 
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                  Marry poppins returns
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Mary Poppins Returns
                 </p>
               </div>
 
@@ -176,8 +176,8 @@ export default function ProjectsPage() {
 
 
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                  Birds of the prey
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Birds of Prey
                 </p>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function ProjectsPage() {
                 />
 
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Captain Marvel
                 </p>
               </div>
@@ -218,7 +218,7 @@ export default function ProjectsPage() {
                 />
 
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Eternals
                 </p>
               </div>
@@ -235,8 +235,8 @@ export default function ProjectsPage() {
               />
 
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-              <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                Spiderman NWH
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                Spider-Man: No Way Home
               </p>
             </div>
           </div>
@@ -255,8 +255,8 @@ export default function ProjectsPage() {
               />
 
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-              <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                Stranger things
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                Stranger Things
               </p>
             </div>
 
@@ -269,7 +269,7 @@ export default function ProjectsPage() {
                 />
 
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Equalizer 2
                 </p>
               </div>
@@ -283,8 +283,8 @@ export default function ProjectsPage() {
                 />
 
                 <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                  Hawk eye
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Hawk Eye
                 </p>
               </div>
             </div>
@@ -301,7 +301,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   The Magnificent Seven
                 </p>
               </div>
@@ -312,7 +312,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   The Expanse
                 </p>
               </div>
@@ -323,7 +323,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 The New Mutants
               </p>
             </div>
@@ -340,7 +340,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Top Gun Maverick
               </p>
             </div>
@@ -351,7 +351,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4  text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Tomb Raider
                 </p>
               </div>
@@ -362,8 +362,8 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
-                  The widow
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                 The Widow
                 </p>
               </div>
             </div>
@@ -383,7 +383,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   The Bye Bye Man
                 </p>
               </div>
@@ -394,8 +394,8 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
-                  Spider-Man HomeComing
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  Spider-Man: Homecoming
                 </p>
               </div>
             </div>
@@ -405,7 +405,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 The Boys
               </p>
             </div>
@@ -422,7 +422,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Rupture
               </p>
             </div>
@@ -435,7 +435,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Patriots Day
                 </p>
               </div>
@@ -446,7 +446,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Pacific Rim Uprising
                 </p>
               </div>
@@ -466,7 +466,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   October Faction
                 </p>
               </div>
@@ -477,7 +477,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Mile 22
                 </p>
               </div>
@@ -488,7 +488,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Murdoch Mysteries
               </p>
             </div>
@@ -510,7 +510,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Lock & Key
               </p>
             </div>
@@ -522,7 +522,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Wish Upon
                 </p>
               </div>
@@ -533,7 +533,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Trickster
                 </p>
               </div>
@@ -553,7 +553,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg ">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ">
                   Midway
                 </p>
               </div>
@@ -564,7 +564,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Into The Birdlands
                 </p>
               </div>
@@ -575,7 +575,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Kin
               </p>
             </div>
@@ -592,7 +592,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Instant Family
               </p>
             </div>
@@ -604,7 +604,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Hubie Halloween
                 </p>
               </div>
@@ -615,7 +615,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Geostorm
                 </p>
               </div>
@@ -635,7 +635,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Fences
                 </p>
               </div>
@@ -646,7 +646,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Creed II
                 </p>
               </div>
@@ -657,8 +657,8 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
-                Daddy home
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                Daddy's Home
               </p>
             </div>
           </div>
@@ -675,7 +675,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Channel Zero
               </p>
             </div>
@@ -687,7 +687,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Cardinal
                 </p>
               </div>
@@ -698,7 +698,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Black Panther
                 </p>
               </div>
@@ -719,7 +719,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 1"
                   className="w-full h-[380px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Conjuring 3
                 </p>
               </div>
@@ -730,7 +730,7 @@ export default function ProjectsPage() {
                   alt="Dummy Right 2"
                   className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                 />
-                <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+                <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   Ad Astra
                 </p>
               </div>
@@ -741,7 +741,7 @@ export default function ProjectsPage() {
                 alt="Dummy Main"
                 className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
               />
-              <p className="absolute bottom-4 left-4 text-white font-semibold text-lg">
+              <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Alias Grace
               </p>
             </div>

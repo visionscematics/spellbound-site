@@ -48,20 +48,20 @@ export default function About() {
             Ideas
           </h2>
 
-          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
             Founded in 2015, Spellbound Visual Effects & Animation Pvt. Ltd. was
             formed by a team of leading industry professionals. Headquartered in
             Chennai, Tamil Nadu, India, it commenced operations by providing
             multi-vendor services for Visual Effects & Animation.
           </p>
 
-          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
             Spellbound specializes in making outsourcing an entirely seamless
             component of post production. We deliver high quality results to a
             mission relevant and daily decision environment.
           </p>
 
-          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
             Our professionals have more than ten years experience in the visual
             effects and animation industry and specialize in Roto, Paint/Prep,
             Compositing, Matchmove, Rotomation and Animation services.
@@ -70,13 +70,13 @@ export default function About() {
             requiring roto, paint/prep, compositing, matchmove, and rotomation.
           </p>
 
-          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
             Spellbound is driven by the tenet of maintaining total client
             satisfaction. We provide an exceptional cohesion of quality, cost
             effectiveness, and rapid turnaround.
           </p>
 
-          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base md:text-md leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
             We understand communication is the core of any production and have
             an international staff in Chennai, Vancouver and Los Angeles
             available to assist in all aspects of post production.

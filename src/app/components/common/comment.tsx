@@ -38,8 +38,7 @@ export default function Comments({ pageName,projectId }: CommentsProps) {
             });
             // console.log('beforResponse:', res);
             const json = await res.json();
-            console.log('Response:', json); // Log the response for debugging
-
+            console.log('Response:', json); 
             if (res.ok) {
                 toast.success('Comment sent successfully!');
                 reset();

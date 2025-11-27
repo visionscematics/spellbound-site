@@ -37,27 +37,36 @@ export async function POST(req: NextRequest) {
     }
 
     console.log("Creating comment...");
-    const newComment = await prisma.pendingComment.create({
-      data: {
-        name,
-        email,
-        comment,
-        pageName: "projects",
-        
-
-      },
-    });
-    if (!projectId) {
-  throw new Error("projectId missing da 😭");
+if (!projectId) {
+  return new Response(JSON.stringify({ message: "projectId missing" }), {
+    status: 400,
+    headers: { "Content-Type": "application/json" },
+  });
 }
 
-    //  const baseurl = process.env.BASE_URL || "http://localhost:3000/projects/";
+console.log("Creating comment...");
+
+const newComment = await prisma.pendingComment.create({
+  data: {
+    name,
+    email,
+    comment,
+    pageName: "projects",
+    projectId: Number(projectId), // VERY IMPORTANT
+  },
+});
+
+
+     const baseurl = process.env.BASE_URL || "http://localhost:3000/projects/";
     // const approveUrl = `${baseurl}${projectId}/commentApprove?id=${newComment.id}`;
     // const rejectUrl = `${baseurl}${projectId}commentReject?id=${newComment.id}`;
 
 
+
     const approveUrl = `https://spellboundvfx.com/projects/${projectId}/commentApprove?id=${newComment.id}`;
     const rejectUrl = `https://spellboundvfx.com/projects/${projectId}/commentReject?id=${newComment.id}`;
+
+
 
 
     console.log("Sending email...");

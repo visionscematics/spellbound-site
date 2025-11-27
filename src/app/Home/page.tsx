@@ -149,7 +149,9 @@ export default function HomePage() {
 
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Artistic Excellence</h1>
 
-            <button className="flex items-center text-white font-semibold text-lg hover:text-[#c00] transition-colors">
+            <button  
+            onClick={() => window.location.href = "/about"}
+            className="flex items-center text-white font-semibold text-lg hover:text-[#c00] transition-colors ">
               Read More →
             </button> 
           </div>
@@ -179,12 +181,13 @@ export default function HomePage() {
             </div>
 
             <div>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-justify">
                 Established in 2015, We are TPN Certified professional experts who are the foremost choice for post-production
                 services globally. We have worked with Emmy-winning international motion pictures, delivering seamless high-quality
                 2D and Native Stereo work requiring Roto, Paint/Prep, Compositing, Match Move, and Rotomation.
               </p>
-              <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-md">Read More</button>
+              <button  onClick={() => window.location.href = "/services"}
+              className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-md ">Read More</button>
             </div>
           </div>
         </section>
@@ -194,8 +197,8 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { title: "Once Upon a Time in Hollywood", img: "/home/Once-upon-time-in-hollywood-small-final.jpg" },
-                { title: "Spiderman – Far From Home", img: "/home/Far-from-home-final-small.jpg" },
-                { title: "Antman & the WASP", img: "/home/Ant-man-and-the-wasp-small-final.jpg" },
+                { title: "Spider-Man: Far from Home", img: "/home/Far-from-home-final-small.jpg" },
+                { title: "Ant-Man and the Wasp", img: "/home/Ant-man-and-the-wasp-small-final.jpg" },
               ].map((p, i) => (
                 <div
                   key={i}
@@ -231,7 +234,7 @@ export default function HomePage() {
                   <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
 
 
-                  <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                  <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     Shanchi
                   </p>
                 </div>
@@ -248,8 +251,8 @@ export default function HomePage() {
 
 
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      Marry poppins returns
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                     Mary Poppins Returns
                     </p>
                   </div>
 
@@ -263,8 +266,8 @@ export default function HomePage() {
 
 
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      Birds of the prey
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      Birds of Prey
                     </p>
                   </div>
                 </div>
@@ -327,7 +330,7 @@ export default function HomePage() {
                       className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                     />
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       Captain Marvel
                     </p>
                   </div>
@@ -341,7 +344,7 @@ export default function HomePage() {
                       className="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                     />
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       Eternals
                     </p>
                   </div>
@@ -356,8 +359,8 @@ export default function HomePage() {
                     className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                   />
                   <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                  <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    Spiderman NWH
+                  <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    Spider-Man: No Way Home
                   </p>
                 </div>
               </div>
@@ -372,15 +375,15 @@ export default function HomePage() {
                 <div className="col-span-2 relative">
                   <AnimatedImage
                     src="/home/Starnger-things.jpg"
-                    alt="Stranger things"
+                    alt="Stranger Things"
                     className="w-full h-[800px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-500"
                   />
 
                   <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
 
 
-                  <p className="absolute bottom-4 left-6 text-white font-semibold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    Stranger things
+                  <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    Stranger Things
                   </p>
                 </div>
 
@@ -396,7 +399,7 @@ export default function HomePage() {
 
 
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       Equalizer 2
                     </p>
                   </div>
@@ -411,8 +414,8 @@ export default function HomePage() {
 
 
                     <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent rounded-b-md"></div>
-                    <p className="absolute bottom-4 left-6 text-white font-semibold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      Hawk eye
+                    <p className="absolute bottom-4 left-6 text-white font-semibold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      Hawk-Eye
                     </p>
                   </div>
                 </div>
@@ -423,95 +426,70 @@ export default function HomePage() {
 
 
 
-          <section className="relative py-16 px-12 bg-white text-black dark:bg-[#0f0f0f] dark:text-white transition-colors duration-300 overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,0,0,0.04),_transparent_60%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.06),_transparent_60%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(0,0,0,0.03),_transparent_60%)] dark:bg-[radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.04),_transparent_60%)]"></div>
+ <section className="relative py-16 px-6 md:px-12 bg-white text-black dark:bg-[#0f0f0f] dark:text-white transition-colors duration-300 overflow-hidden">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,0,0,0.04),_transparent_60%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.06),_transparent_60%)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(0,0,0,0.03),_transparent_60%)] dark:bg-[radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.04),_transparent_60%)]"></div>
 
-            <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+  <div className="relative max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
 
-              <div className="flex-1 pr-6">
-                <h4 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400">What We Do</h4>
-                <div className="w-[60%] h-[1px] bg-gray-400 dark:bg-gray-600 my-3"></div>
-                <h2 className="text-4xl md:text-4xl font-extrabold leading-tight text-black dark:text-white mb-4">Bringing Alive Vivid Visions</h2>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Comprehensive post-production services for project plans, visual strategies and developing
-                  unfathomable visual effects with a prolific team and contemporary technology for large and
-                  diversified international productions.
-                </p>
-              </div>
+    {/* LEFT CONTENT */}
+    <div className="flex-1">
+      <h4 className="text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400">
+        What We Do
+      </h4>
+      <div className="w-24 h-[1px] bg-gray-400 dark:bg-gray-600 my-3"></div>
+      <h2 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+        Bringing Alive Vivid Visions
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">
+        Comprehensive post-production services for project plans, visual strategies and developing
+        unfathomable visual effects with a prolific team and contemporary technology for large and
+        diversified international productions.
+      </p>
+    </div>
 
-              <div className="flex flex-col items-center justify-center space-y-8 md:space-y-8 flex-shrink-0">
+    {/* RIGHT ICON GRID */}
+    <div className="flex-1 flex flex-col items-center gap-10">
 
-                <div className="ml-[300px] flex justify-center gap-10 md:gap-10">
-                  {[
-                    { label: "Rotoscopy", light: "/logo/Roto-1.png", dark: "/logo/Roto-2-1.png" },
-                    { label: "Paint/Prep", light: "/logo/print.png", dark: "/logo/Paintprep-2.png" },
-                    { label: "Compositing", light: "/logo/composite.png", dark: "/logo/Compositing-2.png" },
-                  ].map((item) => (
-                    <div key={item.label} className="flex flex-col items-center group relative">
-                      <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
-
-                        <Image
-                          src={item.light}
-                          alt={item.label}
-                          width={32}
-                          height={32}
-                          className="w-8 h-8 object-contain block dark:hidden"
-                        />
-
-                        <Image
-                          src={item.dark}
-                          alt={item.label}
-                          width={32}
-                          height={32}
-                          className="w-8 h-8 object-contain hidden dark:block"
-                        />
-
-                      </div>
-
-                      <p className="mt-2 text-[14px] font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:rounded-full after:transition-all after:duration-300 after:-translate-x-1/2 group-hover:after:w-6">
-                        {item.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="ml-[300px] flex justify-center gap-10 md:gap-10">
-                  {[
-                    { label: "Match Moving", light: "/logo/match-move.png", dark: "/logo/Matchmove-2.png" },
-                    { label: "Rotomation", light: "/logo/Rotomotion.png", dark: "/logo/Rotomation2.png" },
-                  ].map((item) => (
-                    <div key={item.label} className="flex flex-col items-center group relative">
-                      <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
-
-                        <Image
-                          src={item.light}
-                          alt={item.label}
-                          width={32}
-                          height={32}
-                          className="w-8 h-8 object-contain block dark:hidden"
-                        />
-
-                        <Image
-                          src={item.dark}
-                          alt={item.label}
-                          width={32}
-                          height={32}
-                          className="w-8 h-8 object-contain hidden dark:block"
-                        />
-
-                      </div>
-
-                      <p className="mt-2 text-[14px] font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:rounded-full after:transition-all after:duration-300 after:-translate-x-1/2 group-hover:after:w-6">
-                        {item.label}
-                      </p>
-
-                    </div>
-                  ))}
-                </div>
-              </div>
+      <div className="grid grid-cols-3 gap-8 text-center">
+        {[
+          { label: "Rotoscopy", light: "/logo/Roto-1.png", dark: "/logo/Roto-2-1.png" },
+          { label: "Paint/Prep", light: "/logo/print.png", dark: "/logo/Paintprep-2.png" },
+          { label: "Compositing", light: "/logo/composite.png", dark: "/logo/Compositing-2.png" },
+        ].map((item) => (
+          <div key={item.label} className="flex flex-col items-center group">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
+              <Image src={item.light} alt={item.label} width={32} height={32} className="block dark:hidden" />
+              <Image src={item.dark} alt={item.label} width={32} height={32} className="hidden dark:block" />
             </div>
-          </section>
+            <p className="mt-2 text-sm font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:-translate-x-1/2 group-hover:after:w-6">
+              {item.label}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-2 gap-8 text-center">
+        {[
+          { label: "Match Moving", light: "/logo/match-move.png", dark: "/logo/Matchmove-2.png" },
+          { label: "Rotomation", light: "/logo/Rotomotion.png", dark: "/logo/Rotomation2.png" },
+        ].map((item) => (
+          <div key={item.label} className="flex flex-col items-center group">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-400 dark:border-gray-500 group-hover:border-red-600 transition-all duration-300">
+              <Image src={item.light} alt={item.label} width={32} height={32} className="block dark:hidden" />
+              <Image src={item.dark} alt={item.label} width={32} height={32} className="hidden dark:block" />
+            </div>
+            <p className="mt-2 text-sm font-semibold text-red-600 relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-6px] after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:-translate-x-1/2 group-hover:after:w-6">
+              {item.label}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
           <section className="relative py-20 bg-white text-black dark:bg-[#0f0f0f] dark:text-white">
             <div className="grid grid-cols-1 md:grid-cols-4">
               {[
@@ -600,7 +578,7 @@ export default function HomePage() {
                   </div>
                   <div className={`overflow-hidden transition-all duration-500 ${active === "security" ? "max-h-40 mt-2" : "max-h-0"}`}>
                     <p className="text-sm leading-relaxed">
-                      Data security is our mainstream priority throughout the project process...
+                      Data security is our mainstream priority throughout the project process.
                     </p>
                   </div>
                 </div>

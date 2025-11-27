@@ -17,9 +17,9 @@ const projects = [
   { id: 7, title: "Chupa", image: "/projects/CHUPA.jpeg" },
   { id: 8, title: "Ghosted", image: "/projects/GHOSTED.jpg" },
   { id: 9, title: "The Gray Man", image: "/projects/grayman.jpeg" },
-  { id: 10, title: "Ant-Man quantumania", image: "/projects/ANT.jpg" },
+  { id: 10, title: "Ant-Man and the Wasp: Quantumania", image: "/projects/ANT.jpg" },
   { id: 11, title: "Black Adam", image: "/projects/BLACKADAM.jpg" },
-  { id: 12, title: "Black panther-Wakanda Forever", image: "/projects/BLACKPANTHER.jpeg" },
+  { id: 12, title: "Black Panther: Wakanda Forever", image: "/projects/BLACKPANTHER.jpeg" },
 ];
 
 // export default function ProjectDetailPage({ params }: { params: { id: string } }) {
@@ -91,7 +91,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           <h5 className="text-gray-400 mb-8">
             Your email address will not be published. Required fields are marked *
           </h5>
-          <Comments pageName="my-blog-page" />
+          {/* <Comments pageName="my-blog-page" /> */}
+          <Comments projectId={id} pageName="project-detail" />
+
 
         </div>
         

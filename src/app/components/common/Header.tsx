@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
+
 export default function Header() {
   const pathname = usePathname();
   const { theme } = useTheme();
@@ -56,7 +57,8 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <button className="bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold text-[15px] hover:bg-red-700 transition-all">
+          <button onClick={() => window.location.href = "/contact"}
+          className="bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold text-[15px] hover:bg-red-700 transition-all">
             Get in touch
           </button>
         </div>
