@@ -9,7 +9,7 @@ import AnimatedImage from "../components/common/AnimatedImage";
 
 const slides = [
   {
-    image: "/home/Second",
+    image: "/home/Second.jpg",
     title2: "Stellar",
   },
   {
