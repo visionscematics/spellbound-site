@@ -36,16 +36,27 @@ export async function GET(req: NextRequest) {
     }
 
     console.log("Approving comment...");
-   await prisma.approvedComment.create({
-      data: {
-        name: pendingComment.name,
-        email: pendingComment.email,
-        comment: pendingComment.comment,
-        pageName:pendingComment.pageName,
-        approvedAt: new Date(),
-        projectId: pendingComment.projectId  
-      },
-    });
+  //  await prisma.approvedComment.create({
+  //     data: {
+  //       name: pendingComment.name,
+  //       email: pendingComment.email,
+  //       comment: pendingComment.comment,
+  //       pageName:pendingComment.pageName,
+  //       approvedAt: new Date(),
+  //       projectId: pendingComment.projectId  
+  //     },
+  //   });
+await prisma.approvedComment.create({
+  data: {
+    name: pendingComment.name,
+    email: pendingComment.email,
+    comment: pendingComment.comment,
+    pageName: pendingComment.pageName,
+    approvedAt: new Date(),
+  },
+});
+
+
 
     console.log("Deleting pending comment...");
 await prisma.pendingComment.delete({
