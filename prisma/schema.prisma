@@ -23,7 +23,7 @@ model ApprovedComment {
   email      String
   comment    String
   pageName   String
-  projectId Int  
+  projectId  Int  
   approvedAt DateTime @default(now())
 }
 
