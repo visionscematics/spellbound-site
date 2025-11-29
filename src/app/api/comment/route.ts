@@ -51,7 +51,8 @@ const newComment = await prisma.pendingComment.create({
     name,
     email,
     comment,
-    pageName: "projects",
+    // pageName: "projects",
+    pageName,
     projectId: Number(projectId), // VERY IMPORTANT
   },
 });
