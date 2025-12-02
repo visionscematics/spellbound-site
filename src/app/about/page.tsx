@@ -92,7 +92,7 @@ function Carousel({ images, title, description, reverse }: CarouselProps) {
 
 {/* TEXT SIDE */}
 {(title || description) && (
-  <div className="w-full">
+  <div className="w-full text-justify">
     {description && (
       <p
         className="text-md text-gray-500 dark:text-gray-400 mb-2"
@@ -268,20 +268,14 @@ is our pride."
   images={newSectionImages}
   reverse
   description={`Celebrating our journey of Excellence & Achievement`}
-  title={`Our <b>innovative approach</b> has earned us multiple <b>industry awards</b> and recognitions.
-Each accolade reflects our team’s <b>relentless pursuit of excellence</b> and creative brilliance.
-Their <b>excellence</b>
-is our <b>pride</b>.`}
+  title={`Our innovative approach has earned us multiple <b> industry awards</b> and recognitions. Each accolade reflects our team’s relentless pursuit of excellence and creative brilliance. Their excellence is our pride.`}
  />
 
 
           <Carousel
             images={recreationImages}
             description="A glimpse into our Creative & Innovative Workspace"
-              title={`Where <b>cutting-edge facilities</b> meet inspiring, collaborative environments.
-Every space is designed to elevate <b>creativity, productivity, </b>and teamwork.
-Their <b>space to create</b>
-is our <b>space to inspire.</b>.`}
+              title={`Where <b>cutting-edge facilities</b> meet inspiring, collaborative environments. Every space is designed to elevate creativity, productivity, and teamwork. Their space to create is our space to inspire.`}
           />
 
         </div>
