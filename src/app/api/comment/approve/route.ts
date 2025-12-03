@@ -52,6 +52,7 @@ await prisma.approvedComment.create({
     email: pendingComment.email,
     comment: pendingComment.comment,
     pageName: pendingComment.pageName,
+    projectId: pendingComment.projectId,
     approvedAt: new Date(),
   },
 });

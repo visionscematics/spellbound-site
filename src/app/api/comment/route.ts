@@ -108,8 +108,8 @@ const newComment = await prisma.pendingComment.create({
 
     await transporter.sendMail({
       from: username,
-      //  to:"ramasrij18@gmail.com",
-      to: prodUsername,
+       to:"ramasrij18@gmail.com",
+      // to: prodUsername,
       subject: "New comment for approval",
       replyTo: email,
       html: htmlContent,

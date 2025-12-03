@@ -84,7 +84,7 @@ export default function ContactForm() {
                <div> 
                 <label className="block text-sm font-semibold mb-2"> Phone{" "} <span className="text-gray-500 dark:text-gray-600"> (optional) </span> 
                 </label> 
-                <input name="Mobile" value={formData.mobile} onChange={handleChange} type="tel" placeholder="Your actual phone number" className="w-full px-3 py-2 rounded-md bg-[#f5f5f5] dark:bg-[#1f1f1f] text-foreground focus:border-[#c00] focus:ring-1 focus:ring-[#c00] focus:outline-none transition" /> 
+                <input name="mobile" value={formData.mobile} onChange={handleChange} type="tel" placeholder="Your actual phone number" className="w-full px-3 py-2 rounded-md bg-[#f5f5f5] dark:bg-[#1f1f1f] text-foreground focus:border-[#c00] focus:ring-1 focus:ring-[#c00] focus:outline-none transition" /> 
                 </div> 
         <div> 
           <label className="block text-sm font-semibold mb-2"> Subject{" "} <span className="text-gray-500 dark:text-gray-600"> (optional) </span> </label> <input name="course" value={formData.course} onChange={handleChange} type="text" placeholder="Choose a subject" className="w-full px-3 py-2 rounded-md bg-[#f5f5f5] dark:bg-[#1f1f1f] text-foreground focus:border-[#c00] focus:ring-1 focus:ring-[#c00] focus:outline-none transition" /> </div>

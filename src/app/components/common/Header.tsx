@@ -29,14 +29,32 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white dark:bg-[#0c0c0c] shadow-sm transition-colors duration-300">
       <div className="mx-auto flex items-center justify-between px-6 py-3">
         <Link href="/">
-          <Image
-            src="/spellboundlogo.png"
+          {/* <Image
+            src="/3.png"
             alt="Spellbound Logo"
-            width={140}
-            height={50}
+            width={200}
+            height={300}
             priority
             className="cursor-pointer"
-          />
+          /> */}
+          <Image
+  src="/spellboundlogo white.png"
+  alt="Spellbound Logo"
+  width={200}
+  height={300}
+  priority
+  className="cursor-pointer block dark:hidden"
+/>
+
+<Image
+  src="/spellboundlogo1.png"
+  alt="Spellbound Logo"
+  width={200}
+  height={300}
+  priority
+  className="cursor-pointer hidden dark:block"
+/>
+
         </Link>
 
   

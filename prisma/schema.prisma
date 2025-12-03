@@ -14,7 +14,7 @@ model PendingComment {
   email     String
   comment   String
   pageName  String
-  projectId Int?
+  projectId Int
   createdAt DateTime @default(now())
 }
 model ApprovedComment {
@@ -23,7 +23,7 @@ model ApprovedComment {
   email      String
   comment    String
   pageName   String
-  projectId Int?
+  projectId Int
   approvedAt DateTime
 }
 

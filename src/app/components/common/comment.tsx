@@ -91,7 +91,7 @@ export default function Comments({ pageName,projectId }: CommentsProps) {
                             <input
                                 // {...register('name')}
                                 type="text"
-                                placeholder="Your Website Name"
+                                placeholder="Your website"
                                 className="w-full p-3 rounded-md border border-gray-600 dark:border-gray-700 bg-transparent focus:outline-none focus:border-[#e63946] transition-all"
                             />
                             {errors.name && (

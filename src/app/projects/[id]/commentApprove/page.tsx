@@ -1,4 +1,3 @@
-// ClientComponent.tsx
 'use client';
 
 import { useSearchParams } from 'next/navigation';
@@ -12,17 +11,17 @@ const CommentApprove = () => {
       if (commentId) {
         fetch(`/api/comment/approve?id=${commentId}`)
           .then((resp) => {
-            console.log('Blog Comment Approved Successfully!', resp);
+            console.log('Comment Approved Successfully!', resp);
           })
           .catch((err) => {
-            console.error('Blog Comment Approve err:', err);
+            console.error('Comment Approve err:', err);
           });
       }
     }, [commentId]);
   
     return(
     <div className="h-96 text-white flex justify-center items-center text-2xl">
-       Blog Comment Approved 
+      Comment Approved 
     </div>
     )
   };

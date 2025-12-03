@@ -9,7 +9,6 @@ export async function POST(req) {
     const username = process.env.SMTP_EMAIL;
     const password = process.env.SMTP_PASSWORD;
     const prodUsername = process.env.PROD_EMAIL || 'production@spellboundvfx.com';
-    const prodPassword = process.env.PROD_EMAIL_PASSWORD;
 
 
 
@@ -44,7 +43,8 @@ export async function POST(req) {
     await Promise.all([
       transporter.sendMail({
         from: username,
-        to: username,
+        // to: username,
+        to: prodUsername,
         // to: "ramasrij18@gmail.com",
         subject: `VFX Contact Submission for ${course} - VFX`,
         replyTo: email,
@@ -76,8 +76,8 @@ export async function POST(req) {
               </table>
         
               <p style="text-align: center; margin-top: 20px; color: white;">
-                <strong>Digiaura</strong> <br />
-                <a href="mailto:${username}" style="color: #ffffff;">Contact Us</a>
+                <strong>Spellbound VFX</strong> <br />
+                <a href="mailto:${prodUsername}" style="color: #ffffff;">Contact Us</a>
               </p>
             </div>
           `,
@@ -116,8 +116,8 @@ export async function POST(req) {
               </table>
         
               <p style="text-align: center; margin-top: 20px; color: white;">
-                <strong>Digiaura</strong> <br />
-                <a href="mailto:${username}" style="color: #ffffff;">Contact Us</a>
+                <strong>Spellbound VFX</strong> <br />
+                <a href="mailto:${prodUsername}" style="color: #ffffff;">Contact Us</a>
               </p>
             </div>
           `,
@@ -133,17 +133,17 @@ export async function POST(req) {
               <h2 style="background-color: rgba(0, 0, 0, 0.5); color: white; text-align: center; padding: 10px; border-radius: 10px;">Thank You for Contacting Us</h2>
               <p style="font-size: 16px; color: white; text-align: justify;">
                 Dear ${name},<br/><br/>
-                Thank you for reaching out to <strong>Spellbound VFX </strong>.
+                Thank you for reaching out to <strong>Spellbound VFX.</strong>
                 Our team will review your inquiry and get back to you shortly. 
               </p>
         
               <p style="font-size: 16px; color: white; text-align: justify;">
-                If you have any immediate questions, feel free to reply to this email, or contact us at <a href="mailto:${username}" style="color: #ffffff;">${username}</a>.
+                If you have any immediate questions, feel free to reply to this email, or contact us at <a href="mailto:${prodUsername}" style="color: #ffffff;">${prodUsername}</a>.
               </p>
               
               <p style="text-align: center; margin-top: 20px; color: white;">
                 <strong>Spellbound VFX </strong> <br/>
-                <a href="mailto:${username}" style="color: #ffffff;">Contact Us</a>
+                <a href="mailto:${prodUsername}" style="color: #ffffff;">Contact Us</a>
               </p>
             </div>
           `,

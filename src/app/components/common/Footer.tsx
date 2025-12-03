@@ -21,14 +21,25 @@ export default function Footer() {
 
     {/* Logo */}
 <div className="flex flex-col items-center sm:items-start">
+  {/* Light theme logo */}
   <Image
-    src="/spellboundlogo.png"
+    src="/spellboundlogo white.png"
     alt="Spellbound Logo"
-    width={200}
-    height={100}
-    className="object-contain -mt-6 mb-6" // moved up a bit with -mt-4
+    width={350}
+    height={350}
+    className="object-contain -mt-5 mb-6 block dark:hidden"
+  />
+
+  {/* Dark theme logo */}
+  <Image
+    src="/image.png"
+    alt="Spellbound Logo"
+    width={350}
+    height={350}
+    className="object-contain  -mt-6 mb-6 hidden dark:block"
   />
 </div>
+
 
 
     {/* Address */}
